@@ -1,48 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Calculator</title>
-        <script type="text/javascript" src="controller.js"></script>
-        <script type="text/javascript" src="calculator.js"></script>
-        <link rel="stylesheet" type="text/css" href="calculator.css" />
-    </head>
-  
-    <body>
-      
-      <center>
-        
-      <div class="inputBoxes">
-      <div class="firstBox">
-      <label for="inputNumberOne" class="firstLabel">first number</label>
-      <input type="number" name="inputNumberOne" id="inputNumberOne" autofocus>
+  <head>
+    <title>Calculator</title>
+    <script type="text/javascript" src="controller.js"></script>
+    <script type="text/javascript" src="calculator.js"></script>
+    <link rel="stylesheet" type="text/css" href="calculator.css" />
+  </head>
+  <body>
+    <!-- Fill in html here -->
+    <div class="row">
+      <div class="field">
+        <label for="first_number">first number</label>
+        <input
+          type="number"
+          name="first_number"
+          id="inputNumberOne"
+          autofocus
+        />
       </div>
-        
-      <div class="secondBox">
-        <label for="inputNumberTwo" class="secondLabel">second number</label>
-      <input type="number" name="inputNumberTwo" id="inputNumberTwo">
+
+      <div class="field">
+        <label for="second_number">second number</label>
+        <input type="number" name="second_number" id="inputNumberTwo" />
       </div>
-      </div>
-      
-      <div class="radioButtons">
-      <input type="radio" value="add" id="add" name="operators" checked="checked">
+    </div>
+
+    <div class="row operators">
+      <div class="field operator">
+        <input type="radio" value="add" id="add" name="operator" checked />
         <label for="add">Add</label>
-      
-      <input type="radio" value="subtract" id="subtract" name="operators">
+      </div>
+      <div class="field operator">
+        <input type="radio" value="subtract" id="subtract" name="operator" />
         <label for="subtract">Subtract</label>
-        
-      <input type="radio" value="multiply" id="multiply" name="operators">
+      </div>
+      <div class="field operator">
+        <input type="radio" value="multiply" id="multiply" name="operator" />
         <label for="multiply">Multiply</label>
-        
-      <input type="radio" value="divide" id="divide" name="operators">
+      </div>
+      <div class="field operator">
+        <input type="radio" value="divide" id="divide" name="operator" />
         <label for="divide">Divide</label>
       </div>
-      
-        
-      <div class="inputButtons">
-        <button onclick="calculate()" class="equal operate" name="buttons" id="buttons">=</button>
-        <button onclick="clearValues()" class="clear" name="buttons" id="buttons">Clear</button>
-      </div>
-        
-        <h2 id="result"></2>
-    </body>
+    </div>
+
+    <div class="field buttons">
+      <button onclick="calculate()" class="equal operate">=</button>
+      <button onclick="clearValues()" class="clear">Clear</button>
+    </div>
+
+    <div id="result" />
+  </body>
 </html>

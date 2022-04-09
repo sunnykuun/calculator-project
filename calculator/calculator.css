@@ -1,43 +1,28 @@
-.firstBox {
-  float:left;
-  margin-right:20px;
-  display: block;
+/* fill in styling here */
+:root {
+  --default-space: 1rem;
+  --primary-color: #2b7de9;
 }
 
-.firstLabel {
-  display: block;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-.secondBox {
-  float:left;
-  display: block;
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
-.secondLabel {
-  display: block;
+.row > :not(:last-child) {
+  margin-right: var(--default-space);
 }
 
-.inputBoxes {
-  margin-top:50px;
-  display:flex; 
-  justify-content:center;
-  width:100%; 
-  text-align:center;
-}
-
-.radioButtons {
-  margin-top: 20px;
-}
-
-.radioButtons:focus {
-    border:1px solid #4885ed;
-    border-radius: 4px;
-    background: lightgreen;
-    color: white;
-  }
-
-.inputButtons {
-  margin-top: 20px;
+.field {
+  margin-bottom: var(--default-space);
 }
 
 .operator > input[type="radio"]:checked + label {
@@ -47,36 +32,17 @@
 .equal {
   background-color: var(--primary-color);
   border: none;
-  color: black;
-  font-size: large;
-  border-radius: 4px;
-  box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
-}
-
-.equal:focus {
-  background-color: lightgreen;
-  border: none;
   color: white;
   font-size: large;
   border-radius: 4px;
   box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+
 }
 
 .clear{
   outline: none;
   background-color: white;
   border: none;
-  box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
-  border-radius: 4px;
-  font-size: large;
-}
-
-.clear:focus{
-  outline: none;
-  background-color: lightgreen;
-  color: white;
-  border: none;
-  border-radius: 4px;
   box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
   font-size: large;
 }
