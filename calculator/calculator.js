@@ -77,3 +77,6 @@ class Calculator {
     }
   }
 }
+
+//DO NOT TOUCH THIS LINE OF CODE//
+let unit_test = Calculator;
