@@ -1,35 +1,60 @@
+
 class Calculator {
-    firstNumber;
-    secondNumber;
-    operator;
-    value;
+  firstNumber;
+  secondNumber;
+  operator;
+  value;
 
-    constructor(firstNumber, secondNumber, operator) {
-        this.firstNumber = firstNumber;
-        this.secondNumber = secondNumber;
-        this.operator = operator;
-        this.value = 0;
+  constructor(firstNumber, secondNumber, operator) {
+      this.firstNumber = firstNumber;
+      this.secondNumber = secondNumber;
+      this.operator = operator;
+      this.value = 0;
+  }
+
+  // determine the current operation's label
+  getAction() {
+    switch(Operators) {
+      case "add":
+        break;
+      case "subtract":
+        break;
+      case "multiply":
+        break;
+      case "divide":
+        break;
     }
+  }
 
-    // determine the current operation's label
-    getAction() {}
+  // performa a calculation based on the currently selected operation
+  operate(operator) {}
 
-    // performa a calculation based on the currently selected operation
-    operate() {}
+  attemptedDivideByZero = false;
 
-    attemptedDivideByZero = false;
+  // perform addition operation
+  add() {
+    value = this.firstNumber + this.secondNumber;
+    value = result;
+  }
 
-    // perform addition operation
-    add() {}
+  // perform subtraction operation
+  subtract() {
+    value = this.firstNumber - this.secondNumber;
+    value = result;
+  }
 
-    // perform subtraction operation
-    subtract() {}
+  // perform multiplication operation
+  multiply() {
+    value = this.firstNumber * this.secondNumber;
+    value = result;
+  }
 
-    // perform multiplication operation
-    multiply() {}
+  // perform divide operation
+  divide() {
+    value = this.firstNumber / this.secondNumber;
+    value = result;
+  }
 
-    // perform divide operation
-    divide() {}
 }
 
 //DO NOT TOUCH THIS LINE OF CODE//

@@ -6,7 +6,43 @@
         <script type="text/javascript" src="calculator.js"></script>
         <link rel="stylesheet" type="text/css" href="calculator.css" />
     </head>
+  
     <body>
-        <!-- Fill in html here -->
+      
+      <center>
+        
+      <div class="inputBoxes">
+      <div class="firstBox">
+      <label for="firstNumber" class="firstLabel">first number</label>
+      <input type="number" name="firstNumber" id="firstNumber" autofocus>
+      </div>
+        
+      <div class="secondBox">
+        <label for="secondNumber" class="secondLabel">second number</label>
+      <input type="number" name="secondNumber" id="secondNumber">
+      </div>
+      </div>
+      
+      <div class="radioButtons">
+      <input type="radio" id="add" name="Operators" checked="checked">
+        <label for="add">Add</label>
+      
+      <input type="radio" id="subtract" name="Operators">
+        <label for="subtract">Subtract</label>
+        
+      <input type="radio" id="multiply" name="Operators">
+        <label for="multiply">Multiply</label>
+        
+      <input type="radio" id="divide" name="Operators">
+        <label for="divide">Divide</label>
+      </div>
+      
+        
+      <div class="inputButtons">
+        <button class="button" onclick="calculate()">=</button>
+        <button class="button" onclick="clear()">Clear</button>
+      </div>
+        
+        <h2 id="result"></2>
     </body>
 </html>
