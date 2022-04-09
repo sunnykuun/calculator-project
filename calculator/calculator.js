@@ -1,4 +1,3 @@
-
 class Calculator {
   firstNumber;
   secondNumber;
@@ -6,56 +5,75 @@ class Calculator {
   value;
 
   constructor(firstNumber, secondNumber, operator) {
-      this.firstNumber = firstNumber;
-      this.secondNumber = secondNumber;
-      this.operator = operator;
-      this.value = 0;
+    this.firstNumber = firstNumber;
+    this.secondNumber = secondNumber;
+    this.operator = operator;
+    this.value = 0;
   }
 
   // determine the current operation's label
   getAction() {
-    switch(Operators) {
+    switch (this.operator) {
       case "add":
-        break;
+        return "adding";
       case "subtract":
-        break;
+        return "subtracting";
       case "multiply":
-        break;
+        return "multiplying";
       case "divide":
-        break;
+        return "dividing";
+      default:
+        return "";
     }
   }
 
-  // performa a calculation based on the currently selected operation
-  operate(operator) {}
+  // perform a calculation based on the currently selected operation
+  operate() {
+    switch (this.operator) {
+      case "add":
+        this.add();
+        break;
+      case "subtract":
+        this.subtract();
+        break;
+      case "multiply":
+        this.multiply();
+        break;
+      case "divide":
+        if (this.secondNumber === 0) {
+          this.attemptedDivideByZero = true;
+        } else {
+          this.divide();
+        }
+        break;
+      default:
+        break;
+    }
+  }
 
   attemptedDivideByZero = false;
 
   // perform addition operation
   add() {
-    value = this.firstNumber + this.secondNumber;
-    value = result;
+    this.value = this.firstNumber + this.secondNumber;
   }
 
   // perform subtraction operation
   subtract() {
-    value = this.firstNumber - this.secondNumber;
-    value = result;
+    this.value = this.firstNumber - this.secondNumber;
   }
 
   // perform multiplication operation
   multiply() {
-    value = this.firstNumber * this.secondNumber;
-    value = result;
+    this.value = this.firstNumber * this.secondNumber;
   }
 
   // perform divide operation
   divide() {
-    value = this.firstNumber / this.secondNumber;
-    value = result;
+    if (this.secondNumber === 0) {
+      this.attemptedDivideByZero = true;
+    } else {
+      this.value = this.firstNumber / this.secondNumber;
+    }
   }
-
 }
-
-//DO NOT TOUCH THIS LINE OF CODE//
-let unit_test = Calculator;

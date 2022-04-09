@@ -24,23 +24,23 @@
       </div>
       
       <div class="radioButtons">
-      <input type="radio" id="input#add" name="operators" checked="checked" class="operators">
+      <input type="radio" value="add" id="add" name="operators" checked="checked">
         <label for="add">Add</label>
       
-      <input type="radio" id="input#subtract" name="operators" class="operators">
+      <input type="radio" value="subtract" id="subtract" name="operators">
         <label for="subtract">Subtract</label>
         
-      <input type="radio" id="input#multiply" name="operators" class="operators">
+      <input type="radio" value="multiply" id="multiply" name="operators">
         <label for="multiply">Multiply</label>
         
-      <input type="radio" id="input#divide" name="operators" class="operators">
+      <input type="radio" value="divide" id="divide" name="operators">
         <label for="divide">Divide</label>
       </div>
       
         
       <div class="inputButtons">
-        <button class="button" onclick="operate()" class="buttons" name="buttons" id="buttons">=</button>
-        <button class="button" onclick="clear()" class="buttons" name="buttons" id="buttons">Clear</button>
+        <button onclick="calculate()" class="equal operate" name="buttons" id="buttons">=</button>
+        <button onclick="clearValues()" class="clear" name="buttons" id="buttons">Clear</button>
       </div>
         
         <h2 id="result"></2>
