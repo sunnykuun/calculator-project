@@ -13,34 +13,34 @@
         
       <div class="inputBoxes">
       <div class="firstBox">
-      <label for="firstNumber" class="firstLabel">first number</label>
-      <input type="number" name="firstNumber" id="firstNumber" autofocus>
+      <label for="inputNumberOne" class="firstLabel">first number</label>
+      <input type="number" name="inputNumberOne" id="inputNumberOne" autofocus>
       </div>
         
       <div class="secondBox">
-        <label for="secondNumber" class="secondLabel">second number</label>
-      <input type="number" name="secondNumber" id="secondNumber">
+        <label for="inputNumberTwo" class="secondLabel">second number</label>
+      <input type="number" name="inputNumberTwo" id="inputNumberTwo">
       </div>
       </div>
       
       <div class="radioButtons">
-      <input type="radio" id="add" name="Operators" checked="checked">
+      <input type="radio" id="add" name="operators" checked="checked" class="operators">
         <label for="add">Add</label>
       
-      <input type="radio" id="subtract" name="Operators">
+      <input type="radio" id="subtract" name="operators" class="operators">
         <label for="subtract">Subtract</label>
         
-      <input type="radio" id="multiply" name="Operators">
+      <input type="radio" id="multiply" name="operators" class="operators">
         <label for="multiply">Multiply</label>
         
-      <input type="radio" id="divide" name="Operators">
+      <input type="radio" id="divide" name="operators" class="operators">
         <label for="divide">Divide</label>
       </div>
       
         
       <div class="inputButtons">
-        <button class="button" onclick="calculate()">=</button>
-        <button class="button" onclick="clear()">Clear</button>
+        <button class="button" onclick="operate()" class="operate">=</button>
+        <button class="button" onclick="clear()" class="clear">Clear</button>
       </div>
         
         <h2 id="result"></2>
